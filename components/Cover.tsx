@@ -40,7 +40,7 @@ export default function Cover({
           </div>
 
           <h1 className="text-[#d19b22] flex items-center gap-6 text-4xl md:text-[64px] font-playwrite-us-modern drop-shadow-md">
-            Amar <span className="text-4xl">&</span> Amalia
+            Amar <span className="text-4xl translate-y-3">&</span> Amalia
           </h1>
         </header>
 

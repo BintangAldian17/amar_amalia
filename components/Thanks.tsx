@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Thanks() {
   return (
-    <section className="min-h-screen w-full flex flex-col items-center pb-32 gap-10 relative overflow-hidden text-white py-16 justify-center">
+    <section className="min-h-screen w-full flex flex-col items-center gap-10 relative overflow-hidden text-white justify-center">
       <Image
         src="/images/thanks.jpg"
         alt="Hero Background"
@@ -21,7 +21,7 @@ export default function Thanks() {
           See you at our Wedding Day!
         </p>
         <h2 className="text-[#d19b22] flex items-center gap-6 text-4xl md:text-[64px] font-playwrite-us-modern drop-shadow-md mt-10">
-          Amar <span className="text-4xl">&</span> Amalia
+          Amar <span className="text-4xl translate-y-3">&</span> Amalia
         </h2>
         <span className='font-extralight text-4xl mt-5'>07 . 02 . 26</span>
       </div>

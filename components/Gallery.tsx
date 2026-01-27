@@ -52,16 +52,20 @@ export default function Gallery() {
 
             <div className="w-full px-4 z-10">
                 <div className="relative border-4 border-[#d19b22]/30 rounded-xl overflow-hidden w-full md:w-[60%] mx-auto aspect-video shadow-2xl bg-black">
-                    <iframe
-                        className="absolute top-0 left-0 w-full h-full"
-                        // UPDATE: Tambahkan '?autoplay=1&mute=1' di akhir link
-                        // 'mute=1' WAJIB agar autoplay jalan di Chrome/HP
-                        src="https://www.youtube.com/embed/U3x4civmNx4?autoplay=1&mute=1&controls=0&loop=1&playlist=U3x4civmNx4"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                    ></iframe>
+                    <div className="absolute inset-0 w-full h-full pointer-events-none">
+                        <iframe
+                            // PERUBAHAN DI SINI:
+                            // 1. w-[150%] h-[150%]: Memperbesar iframe agar lebih besar dari kotak (zoom in)
+                            // 2. -translate-x-1/2 -translate-y-1/2: Menggeser ke tengah agar zoomnya sentral
+                            // 3. pointer-events-none: Agar user tidak bisa klik/pause (biar jadi background murni)
+                            className="absolute top-1/2 left-1/2 w-[105%] h-[105%] -translate-x-1/2 -translate-y-1/2"
+                            src="https://www.youtube.com/embed/U3x4civmNx4?autoplay=1&mute=1&controls=0&loop=1&playlist=U3x4civmNx4&showinfo=0&modestbranding=1"
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
                 </div>
             </div>
 
