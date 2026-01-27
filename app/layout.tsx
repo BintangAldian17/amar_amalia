@@ -2,21 +2,37 @@ import type { Metadata } from "next";
 import { Playwrite_US_Modern, Poppins } from "next/font/google";
 import "./globals.css";
 
-
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", '500', '600', "700"],
   variable: "--font-poppins",
 });
+
 const playwriteUsModern = Playwrite_US_Modern({
   weight: ["400"],
   variable: "--font-playwrite-us-modern",
 });
 
-
 export const metadata: Metadata = {
-  title: "Welcome to Weeding Amar & Amalia",
+  metadataBase: new URL('https://amar-amalia.my.id'),
+  title: "The Wedding of Amar & Amalia",
+
+  openGraph: {
+    title: "The Wedding of Amar & Amalia",
+    description: "Sabtu 07 Februari 2026",
+    url: 'https://amar-amalia.my.id',
+    siteName: 'Amar & Amalia Wedding',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Amar & Amalia Wedding Invitation',
+      },
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
