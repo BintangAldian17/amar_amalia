@@ -108,7 +108,7 @@ export default function Gallery() {
                             <div
                                 key={`r2-${idx}`}
                                 className={`
-                  relative h-[320px] shrink-0 rounded-lg 
+                  relative h-[320px] shrink-0 rounded-lg overflow-hidden
                   bg-neutral-800 border border-white/10 flex items-center justify-center
                   hover:bg-neutral-700 transition-colors duration-300
                ${item.type === "wide" ? "w-[300px] md:w-[439px]" : "w-[120px] md:w-[221px]"}
