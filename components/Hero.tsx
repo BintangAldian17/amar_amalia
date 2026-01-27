@@ -21,7 +21,7 @@ export default function Hero() {
         {/* Top Text: Join Us + The Wedding Of */}
         <div className="flex flex-col gap-2 mb-3 opacity-90 text-4xl font-light tracking-widest">
           <p>
-            Join Us to Celebrate <br /> The Weading Of
+            Join Us to Celebrate <br /> The Wedding Of
           </p>
         </div>
 

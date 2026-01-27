@@ -31,7 +31,7 @@ export default function Groom() {
           </div>
           <div className="text-center ">
             <p className="font-medium text-[32px]">
-              Assalamu’alaikum Warahmatulllahi Wabarokatuh
+              Assalamu’alaikum Warahmatullahi Wabarokatuh
             </p>
             <p className="font-light text-2xl mt-2">
               Dengan memohon Ridho & Rahmat Allah SWT,
@@ -59,7 +59,7 @@ export default function Groom() {
               </div>
               <a target="_blank" href="https://www.instagram.com/amaar.sr/" className="font-normal text-xl tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full py-3 px-12 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg flex items-center  gap-2 mt-8">
                 <Icon icon="mdi:instagram" width="24" height="24" />
-                @amaliakholifa
+                @amaar.sr
               </a>
             </div>
 
@@ -91,6 +91,10 @@ export default function Groom() {
                 @amaliakholifa
               </a>
             </div>
+          </div>
+          <div className="border-3 border-[#d19b22] p-12 bg-red-300 rounded-2xl text-center">
+            <p className="font-bold text-4xl text-[#D19B22]">AKAD NIKAH</p>
+            <p className="text-2xl font-medium">Telah dilaksanakan 31 Januari 2026</p>
           </div>
           <div className="flex flex-col gap-8 text-[40px] items-center justify-center ">
             <p className="text-4xl text-[#D19B22] font-bold">NGUNDUH MANTU :</p>
