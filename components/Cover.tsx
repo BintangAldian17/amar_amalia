@@ -1,18 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useSearchParams } from "next/navigation"; // 1. Import hook
 
 export default function Cover({
+  to,
   isOpen,
   onOpen,
 }: {
+  to: string | string[] | null;
   isOpen: boolean;
   onOpen: () => void;
 }) {
-  // 2. Ambil value dari parameter '?to='
-  const searchParams = useSearchParams();
-  const guestName = searchParams.get("to");
 
   return (
     <div
@@ -50,11 +48,11 @@ export default function Cover({
         <div className="flex flex-col items-center gap-8 w-full z-10">
 
           {/* 3. Render Kondisional: Hanya muncul jika guestName ada */}
-          {guestName && (
+          {to && (
             <div className="text-center space-y-2">
               <p className="text-xl">Dear,</p>
               <p className="font-semibold underline underline-offset-8 decoration-white/50">
-                {guestName}
+                {to}
               </p>
             </div>
           )}

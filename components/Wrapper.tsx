@@ -6,7 +6,7 @@ import Hero from "./Hero";
 import Groom from "./Groom";
 import Countdown from "./Countdown";
 
-export default function Wrapper() {
+export default function Wrapper({ to }: { to: string | string[] | null }) {
   const [isCoverOpen, setIsCoverOpen] = useState(false);
 
 
@@ -15,7 +15,7 @@ export default function Wrapper() {
       className={`relative w-full font-poppins ${!isCoverOpen ? "h-screen overflow-hidden" : "min-h-screen"
         }`}
     >
-      <Cover isOpen={isCoverOpen} onOpen={() => setIsCoverOpen(true)} />
+      <Cover to={to} isOpen={isCoverOpen} onOpen={() => setIsCoverOpen(true)} />
       {isCoverOpen && (
         <>
           <Hero />

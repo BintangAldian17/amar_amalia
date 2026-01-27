@@ -92,7 +92,7 @@ export default function Groom() {
               </a>
             </div>
           </div>
-          <div className="border-3 border-[#d19b22] p-12 bg-red-300 rounded-2xl text-center">
+          <div className="border-3 border-[#d19b22] p-12 rounded-2xl text-center">
             <p className="font-bold text-4xl text-[#D19B22]">AKAD NIKAH</p>
             <p className="text-2xl font-medium">Telah dilaksanakan 31 Januari 2026</p>
           </div>
