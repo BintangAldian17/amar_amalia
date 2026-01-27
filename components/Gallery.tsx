@@ -1,32 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 
-// Data Dummy: Hanya menentukan tipe (wide/narrow) tanpa URL gambar
 const row1Items = [
-    { id: 1, type: "narrow" },
-    { id: 2, type: "wide" },
-    { id: 3, type: "narrow" },
-    { id: 4, type: "wide" },
-    { id: 5, type: "narrow" },
-    { id: 6, type: "wide" },
+    { id: 1, type: "narrow", images: "/images/gallery/File109.webp" },
+    { id: 2, type: "wide", images: "/images/gallery/File151.webp" },
+    { id: 3, type: "narrow", images: "/images/gallery/File071.webp" },
+    { id: 4, type: "wide", images: "/images/gallery/File152.webp" },
+    { id: 5, type: "narrow", images: "/images/gallery/File171.webp" },
+    { id: 6, type: "wide", images: "/images/gallery/File053.webp" },
 ];
 
 const row2Items = [
-    { id: 7, type: "wide" },
-    { id: 8, type: "narrow" },
-    { id: 9, type: "wide" },
-    { id: 10, type: "narrow" },
-    { id: 11, type: "wide" },
-    { id: 12, type: "narrow" },
+    { id: 1, type: "narrow", images: "/images/gallery/Foto-04.webp" },
+    { id: 2, type: "wide", images: "/images/gallery/Foto-01.webp" },
+    { id: 3, type: "narrow", images: "/images/gallery/Foto-05.webp" },
+    { id: 4, type: "wide", images: "/images/gallery/Foto-02.webp" },
+    { id: 5, type: "narrow", images: "/images/gallery/Foto-06.webp" },
+    { id: 6, type: "wide", images: "/images/gallery/Foto-03.webp" },
 ];
 
 export default function Gallery() {
     return (
         <section className="min-h-screen w-full flex flex-col items-center pb-32 gap-10 relative overflow-hidden text-white py-16">
 
-            {/* Background Image (Tetap ada sebagai mood background) */}
             <Image
                 src="/images/main-bg.webp"
                 alt="Hero Background"
@@ -35,7 +32,6 @@ export default function Gallery() {
                 className="object-cover object-center -z-20 rotate-180"
             />
 
-            {/* Header Text */}
             <div className="w-full text-center px-4 z-10">
                 <h2 className="uppercase text-[#D19B22] font-bold text-4xl mb-5 tracking-widest">
                     Gallery Foto
@@ -51,25 +47,31 @@ export default function Gallery() {
 
 
             <div className="w-full px-4 z-10">
-                <div className="relative border-4 border-[#d19b22]/30 rounded-xl overflow-hidden w-full md:w-[60%] mx-auto aspect-video shadow-2xl bg-black">
+                <div className="relative border-4 border-[#d19b22]/30 rounded-xl overflow-hidden w-full md:w-[60%] mx-auto aspect-video shadow-2xl bg-black group">
                     <div className="absolute inset-0 w-full h-full pointer-events-none">
                         <iframe
-                            // PERUBAHAN DI SINI:
-                            // 1. w-[150%] h-[150%]: Memperbesar iframe agar lebih besar dari kotak (zoom in)
-                            // 2. -translate-x-1/2 -translate-y-1/2: Menggeser ke tengah agar zoomnya sentral
-                            // 3. pointer-events-none: Agar user tidak bisa klik/pause (biar jadi background murni)
-                            className="absolute top-1/2 left-1/2 w-[105%] h-[105%] -translate-x-1/2 -translate-y-1/2"
-                            src="https://www.youtube.com/embed/U3x4civmNx4?autoplay=1&mute=1&controls=0&loop=1&playlist=U3x4civmNx4&showinfo=0&modestbranding=1"
+                            className="absolute top-1/2 left-1/2 w-[140%] h-[140%] -translate-x-1/2 -translate-y-1/2"
+                            src="https://www.youtube.com/embed/U3x4civmNx4?autoplay=1&mute=1&controls=0&loop=1&playlist=U3x4civmNx4&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                         ></iframe>
                     </div>
+
+                    <a
+                        href="https://www.instagram.com/reel/DS91rcgjwqk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 z-20 w-full h-full cursor-pointer flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black/20"
+                    >
+                        <span className="text-white font-semibold tracking-widest bg-black/50 px-4 py-2 rounded-full border border-white/30 backdrop-blur-sm">
+                            Watch Full Video
+                        </span>
+                    </a>
+
                 </div>
             </div>
-
-            {/* --- INFINITE SCROLL GALLERY (PLACEHOLDER MODE) --- */}
             <div className="flex flex-col gap-6 w-full mt-10 marquee-container z-10">
 
                 {/* ROW 1: Bergerak ke KIRI (Atas) */}
@@ -80,16 +82,19 @@ export default function Gallery() {
                             <div
                                 key={`r1-${idx}`}
                                 className={`
-                  relative h-[200px] md:h-[250px] shrink-0 rounded-lg 
+                 shrink-0 rounded-lg h-[320px]
                   bg-neutral-800 border border-white/10 flex items-center justify-center
-                  hover:bg-neutral-700 transition-colors duration-300
-                  ${item.type === "wide" ? "w-[300px] md:w-[400px]" : "w-[120px] md:w-[180px]"}
+                  hover:bg-neutral-700 transition-colors duration-300 overflow-hidden relative
+                  ${item.type === "wide" ? "w-[300px] md:w-[439px]" : "w-[120px] md:w-[221px]"}
                 `}
                             >
                                 {/* Text Label di dalam kotak */}
-                                <span className="text-white/20 font-mono text-sm">
-                                    {item.type === "wide" ? "WIDE FRAME" : "PORTRAIT"}
-                                </span>
+                                <Image
+                                    src={item.images}
+                                    fill
+                                    alt={`Gallery item ${item.id}`}
+                                    className="w-full h-full object-cover absolute object-[center_40%]"
+                                />
                             </div>
                         ))}
                     </div>
@@ -103,15 +108,18 @@ export default function Gallery() {
                             <div
                                 key={`r2-${idx}`}
                                 className={`
-                  relative h-[200px] md:h-[250px] shrink-0 rounded-lg 
+                  relative h-[320px] shrink-0 rounded-lg 
                   bg-neutral-800 border border-white/10 flex items-center justify-center
                   hover:bg-neutral-700 transition-colors duration-300
-                  ${item.type === "wide" ? "w-[300px] md:w-[400px]" : "w-[120px] md:w-[180px]"}
+               ${item.type === "wide" ? "w-[300px] md:w-[439px]" : "w-[120px] md:w-[221px]"}
                 `}
                             >
-                                <span className="text-white/20 font-mono text-sm">
-                                    {item.type === "wide" ? "WIDE FRAME" : "PORTRAIT"}
-                                </span>
+                                <Image
+                                    src={item.images}
+                                    fill
+                                    alt={`Gallery item ${item.id}`}
+                                    className="w-full h-full object-cover absolute object-[center_40%]"
+                                />
                             </div>
                         ))}
                     </div>
