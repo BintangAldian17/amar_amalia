@@ -20,8 +20,8 @@ export default function Groom() {
         className="object-cover object-center -z-20"
       />
       <div className="flex items-center justify-center flex-col w-full">
-        <div className="flex items-center flex-col gap-16 justify-center mt-20">
-          <div className="relative border-3 border-[#d19b22] rounded-xl overflow-hidden w-[60%] aspect-video">
+        <div className="flex items-center flex-col gap-16 justify-center mt-20 w-full">
+          <div className="relative border-3 border-[#d19b22] rounded-xl overflow-hidden w-[50%] aspect-video">
             <Image
               fill
               src="/images/weading.webp"

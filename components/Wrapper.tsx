@@ -5,10 +5,12 @@ import { useState } from "react";
 import Hero from "./Hero";
 import Groom from "./Groom";
 import Countdown from "./Countdown";
+import Gallery from "./Gallery";
+import Gift from "./Gift";
+import Thanks from "./Thanks";
 
 export default function Wrapper({ to }: { to: string | string[] | null }) {
   const [isCoverOpen, setIsCoverOpen] = useState(false);
-
 
   return (
     <main
@@ -21,6 +23,9 @@ export default function Wrapper({ to }: { to: string | string[] | null }) {
           <Hero />
           <Groom />
           <Countdown />
+          <Gallery />
+          <Gift />
+          <Thanks />
         </>
       )}
     </main>
