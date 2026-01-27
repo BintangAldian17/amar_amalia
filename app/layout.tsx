@@ -22,14 +22,6 @@ export const metadata: Metadata = {
     description: "Sabtu 07 Februari 2026",
     url: 'https://amar-amalia.my.id',
     siteName: 'Amar & Amalia Wedding',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Amar & Amalia Wedding Invitation',
-      },
-    ],
     locale: 'id_ID',
     type: 'website',
   },
