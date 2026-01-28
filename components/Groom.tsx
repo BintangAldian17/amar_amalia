@@ -4,7 +4,8 @@ import { Icon } from "@iconify/react";
 export default function Groom() {
   return (
     <section className="min-h-screen w-full flex flex-col items-start lg:pb-32 md:pb-20 pb-10 md:gap-10 gap-5 relative overflow-hidden text-white ">
-      <div className="h-72 bg-[#383737] w-full flex items-center justify-center text-center font-light lg:text-xl md:text-base text-sm flex-col md:px-12 px-9">
+      {/* Header Ayat */}
+      <div className="h-72 bg-[#383737] w-full flex items-center justify-center text-center font-light lg:text-xl md:text-base text-sm flex-col md:px-12 px-9 relative z-10">
         &quot;Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu
         pasangan hidup dari jenismu sendiri supaya
         <br className="md:block hidden" />
@@ -17,15 +18,53 @@ export default function Groom() {
           ( Q.S. Ar-Rum 21 )
         </span>
       </div>
+
+      {/* Background Desktop (Hanya muncul di Layar Besar) */}
       <Image
         src="/images/main-bg.webp"
         alt="Hero Background"
         fill
         priority
-        className="object-cover object-center -z-20"
+        className="object-cover object-center lg:block hidden -z-20"
       />
-      <div className="flex items-center justify-center flex-col w-full lg:px-0 md:px-10 px-6">
-        <div className="flex items-center flex-col lg:gap-16 md:gap-12 gap-8 justify-center lg:mt-20 md:mt-16 mt-8 w-full">
+
+      {/* Background Mobile (Texture Abu-abu) */}
+      <Image
+        src="/images/bg-groom.png"
+        alt="Hero Background"
+        fill
+        priority
+        className="object-cover object-center w-auto lg:hidden -z-30"
+      />
+
+      {/* --- ORNAMEN BUNGA KIRI --- */}
+      {/* Wrapper menentukan lebar fix (120px di HP) */}
+      <div className="absolute -z-10 left-0 -bottom-40 w-[241px] lg:hidden h-full">
+        <Image
+          src="/images/ornament-flower-left.png"
+          alt="Ornament Left"
+          priority
+          width={241}
+          height={2200}
+          className="w-full h-full absolute object-contain"
+        />
+      </div>
+      <div className="absolute -z-10 right-0 -bottom-40 w-[241px] lg:hidden h-full">
+        <Image
+          src="/images/ornament-flower-left.png"
+          alt="Ornament Right"
+          priority
+          width={241}
+          height={2200}
+          className="w-full h-full absolute object-contain rotate-180"
+        />
+      </div>
+
+      {/* Container Konten & Ornamen */}
+      <div className="flex items-center justify-center flex-col w-full lg:px-0 md:px-10 px-6 relative">
+        {/* Konten Utama */}
+        <div className="flex items-center flex-col lg:gap-16 md:gap-12 gap-8 justify-center lg:mt-20 md:mt-16 mt-8 w-full relative z-10">
+          {/* Foto Utama */}
           <div className="relative border-3 border-[#d19b22] rounded-xl overflow-hidden lg:w-[50%] md:w-[60%] w-full md:aspect-video md:h-auto h-[250px]">
             <Image
               fill
@@ -34,6 +73,7 @@ export default function Groom() {
               className="w-full h-full object-cover"
             />
           </div>
+
           <div className="text-center ">
             <p className="font-medium lg:text-[32px] md:text-[24px]">
               Assalamu’alaikum Warahmatullahi Wabarokatuh
@@ -44,7 +84,10 @@ export default function Groom() {
               kami bermaksud menyelenggarakan Syukuran & Resepsi kami:
             </p>
           </div>
+
+          {/* Profil Mempelai */}
           <div className="flex md:flex-row flex-col lg:gap-40 md:gap-20 gap-10 w-1/2 items-center justify-center">
+            {/* Pria */}
             <div className="flex flex-col items-center shrink-0">
               <div className="relative rounded-full overflow-hidden md:w-65 w-52 aspect-square border-3 border-[#d19b22]">
                 <Image
@@ -78,6 +121,8 @@ export default function Groom() {
             >
               &
             </span>
+
+            {/* Wanita */}
             <div className="flex flex-col items-center shrink-0">
               <div className="relative rounded-full overflow-hidden md:w-65 w-52 aspect-square border-3 border-[#d19b22]">
                 <Image
@@ -106,6 +151,8 @@ export default function Groom() {
               </a>
             </div>
           </div>
+
+          {/* Info Akad */}
           <div className="border-3 border-[#d19b22] lg:px-12 lg:py-12 md:px-8 md:py-8 px-6 py-6 rounded-2xl text-center w-full sm:w-fit">
             <p className="font-bold lg:text-4xl md:text-3xl text-2xl text-[#D19B22]">
               AKAD NIKAH
@@ -114,6 +161,8 @@ export default function Groom() {
               Telah dilaksanakan 31 Januari 2026
             </p>
           </div>
+
+          {/* Info Ngunduh Mantu */}
           <div className="flex flex-col gap-8 lg:text-[40px] md:text-[32px] text-2xl items-center justify-center ">
             <p className="lg:text-4xl md:text-3xl text-2xl text-[#D19B22] font-bold">
               NGUNDUH MANTU :
@@ -131,6 +180,8 @@ export default function Groom() {
               <p>2026</p>
             </div>
           </div>
+
+          {/* Info Jam */}
           <div className="flex flex-col items-center justify-center">
             <span className="font-medium lg:text-[32px] md:text-[24px] text-2xl">
               Pengajian Kaum Ibu
@@ -147,6 +198,8 @@ export default function Groom() {
               11.00 s/d 17.00
             </span>
           </div>
+
+          {/* Lokasi */}
           <div className="text-center">
             <span className="font-medium lg:text-[32px] md:text-[24px] text-xl">
               Lokasi:
@@ -157,6 +210,7 @@ export default function Groom() {
               Kec. Gunung Putri, Kab. Bogor
             </p>
           </div>
+
           <a
             target="_blank"
             href="https://maps.app.goo.gl/F7F3SPKdXTTgsxuA9"

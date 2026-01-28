@@ -23,15 +23,43 @@ const row2Items = [
 export default function Gallery() {
   return (
     <section className="min-h-screen w-full flex flex-col items-center lg:pb-32 md:pb-20 pb-10 gap-10 relative overflow-hidden text-white lg:pt-16 md:pt-12 pt-8 ">
+      {/* Background Desktop */}
       <Image
         src="/images/main-bg.webp"
         alt="Hero Background"
         fill
         priority
-        className="object-cover object-center -z-20 rotate-180"
+        className="object-cover object-center lg:block hidden -z-20"
       />
 
-      <div className="w-full text-center px-4 z-10 lg:px-0 md:px-10 px-6">
+      {/* --- ORNAMEN BUNGA (Disamakan dengan Groom) --- */}
+
+      {/* KIRI */}
+      <div className="absolute -z-10 left-0 top-0 w-[241px]  lg:hidden">
+        <Image
+          src="/images/ornament-flower-left.png"
+          alt="Ornament Left"
+          priority
+          width={241}
+          height={800}
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
+      {/* KANAN */}
+      <div className="absolute -z-10 right-0 top-0 w-[241px] lg:hidden">
+        <Image
+          src="/images/ornament-flower-right.png"
+          alt="Ornament Right"
+          priority
+          width={241}
+          height={800}
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
+      {/* --- KONTEN GALLERY --- */}
+      <div className="w-full text-center z-10 lg:px-0 md:px-10 px-6 mt-10">
         <h2 className="font-bold lg:text-5xl md:text-3xl text-3xl text-[#D19B22] lg:mb-16 md:mb-12 mb-8 ">
           Gallery Foto
         </h2>
@@ -71,6 +99,7 @@ export default function Gallery() {
           </a>
         </div>
       </div>
+
       <div className="flex flex-col gap-6 w-full mt-10 marquee-container z-10">
         {/* ROW 1: Bergerak ke KIRI (Atas) */}
         <div className="flex overflow-hidden w-full relative mask-gradient">
