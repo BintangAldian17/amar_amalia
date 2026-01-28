@@ -1,16 +1,21 @@
 import Image from "next/image";
-import { Icon } from "@iconify/react"
+import { Icon } from "@iconify/react";
 
 export default function Groom() {
   return (
-    <section className="min-h-screen w-full flex flex-col items-start  pb-32 gap-10 relative overflow-hidden text-white ">
-      <div className="h-72 bg-[#383737] w-full flex items-center justify-center text-center text-xl flex-col">
-        &quot;Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya
-        <br />
-        kamu dapat ketenangan hati dan dijadikannya kasih sayang di antara kamu. Sesungguhnya yang
-        <br />
-        demikian menjadi tanda-tanda kebesaran-Nya bagi Orang-orang yang berpikir.&quot;
-        <span className="mt-4 text-2xl">( Q.S. Ar-Rum 21 )</span>
+    <section className="min-h-screen w-full flex flex-col items-start lg:pb-32 md:pb-20 pb-10 md:gap-10 gap-5 relative overflow-hidden text-white ">
+      <div className="h-72 bg-[#383737] w-full flex items-center justify-center text-center font-light lg:text-xl md:text-base text-sm flex-col md:px-12 px-9">
+        &quot;Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu
+        pasangan hidup dari jenismu sendiri supaya
+        <br className="md:block hidden" />
+        kamu dapat ketenangan hati dan dijadikannya kasih sayang di antara kamu.
+        Sesungguhnya yang
+        <br className="md:block hidden" />
+        demikian menjadi tanda-tanda kebesaran-Nya bagi Orang-orang yang
+        berpikir.&quot;
+        <span className="mt-4 lg:text-2xl md:text-xl text-base">
+          ( Q.S. Ar-Rum 21 )
+        </span>
       </div>
       <Image
         src="/images/main-bg.webp"
@@ -19,9 +24,9 @@ export default function Groom() {
         priority
         className="object-cover object-center -z-20"
       />
-      <div className="flex items-center justify-center flex-col w-full">
-        <div className="flex items-center flex-col gap-16 justify-center mt-20 w-full">
-          <div className="relative border-3 border-[#d19b22] rounded-xl overflow-hidden w-[50%] aspect-video">
+      <div className="flex items-center justify-center flex-col w-full lg:px-0 md:px-10 px-6">
+        <div className="flex items-center flex-col lg:gap-16 md:gap-12 gap-8 justify-center lg:mt-20 md:mt-16 mt-8 w-full">
+          <div className="relative border-3 border-[#d19b22] rounded-xl overflow-hidden lg:w-[50%] md:w-[60%] w-full md:aspect-video h-[250px]">
             <Image
               fill
               src="/images/weading.webp"
@@ -30,18 +35,18 @@ export default function Groom() {
             />
           </div>
           <div className="text-center ">
-            <p className="font-medium text-[32px]">
+            <p className="font-medium lg:text-[32px] md:text-[24px]">
               Assalamu’alaikum Warahmatullahi Wabarokatuh
             </p>
-            <p className="font-light text-2xl mt-2">
+            <p className="font-light lg:text-2xl md:text-xl text-sm mt-2">
               Dengan memohon Ridho & Rahmat Allah SWT,
               <br />
               kami bermaksud menyelenggarakan Syukuran & Resepsi kami:
             </p>
           </div>
-          <div className="flex gap-40 w-1/2 items-center justify-center">
+          <div className="flex md:flex-row flex-col lg:gap-40 md:gap-20 gap-10 w-1/2 items-center justify-center">
             <div className="flex flex-col items-center shrink-0">
-              <div className="relative rounded-full overflow-hidden w-65 aspect-square border-3 border-[#d19b22]">
+              <div className="relative rounded-full overflow-hidden md:w-65 w-52 aspect-square border-3 border-[#d19b22]">
                 <Image
                   fill
                   src="/images/pria.webp"
@@ -50,26 +55,31 @@ export default function Groom() {
                 />
               </div>
               <div className="flex flex-col text-nowrap items-center gap-2 mt-4">
-                <p className="text-[#d19b22] flex flex-col items-start text-4xl gap-6 font-playwrite-us-modern drop-shadow-md">
+                <p className="text-[#d19b22] flex flex-col items-start lg:text-4xl md:text-2xl text-xl gap-6 font-playwrite-us-modern drop-shadow-md">
                   Amar Shabira Rochaedi
                 </p>
-                <p className="text-[20px] text-center mt-2">
-                  Putra pertama dari Kel. <br /> Bapak Edi Rochaedi & Ibu Sri Wahyuni
+                <p className="text-center mt-2 lg:text-[20px] md:text-[16px] text-sm">
+                  Putra pertama dari Kel. <br /> Bapak Edi Rochaedi & Ibu Sri
+                  Wahyuni
                 </p>
               </div>
-              <a target="_blank" href="https://www.instagram.com/amaar.sr/" className="font-normal text-xl tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full py-3 px-12 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg flex items-center  gap-2 mt-8">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/amaar.sr/"
+                className="font-normal lg:text-xl md:text-base text-sm tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full md:py-3 py-2 lg:px-12 md:px-8 px-6 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg flex items-center  gap-2 mt-8"
+              >
                 <Icon icon="mdi:instagram" width="24" height="24" />
                 @amaar.sr
               </a>
             </div>
 
             <span
-              className={`text-[64px] text-[#d19b22] text-center shrink-0 font-playwrite-us-modern`}
+              className={`lg:text-[64px] md:text-[48px] text-[32px] text-[#d19b22] text-center shrink-0 font-playwrite-us-modern`}
             >
               &
             </span>
             <div className="flex flex-col items-center shrink-0">
-              <div className="relative rounded-full overflow-hidden w-65 aspect-square border-3 border-[#d19b22]">
+              <div className="relative rounded-full overflow-hidden md:w-65 w-52 aspect-square border-3 border-[#d19b22]">
                 <Image
                   fill
                   src="/images/wanita.webp"
@@ -78,49 +88,80 @@ export default function Groom() {
                 />
               </div>
               <div className="flex flex-col text-nowrap items-center gap-2 mt-4">
-                <p className="text-[#d19b22] flex flex-col items-start text-4xl gap-6 font-playwrite-us-modern drop-shadow-md">
+                <p className="text-[#d19b22] flex flex-col items-start lg:text-4xl md:text-2xl text-xl gap-6 font-playwrite-us-modern drop-shadow-md">
                   Amalia Kholifatul Nissa
                 </p>
-                <p className="text-[20px] text-center mt-2">
+                <p className="text-center mt-2 lg:text-[20px] md:text-[16px] text-sm">
                   Putri Kedua dari Kel. <br />
                   Bapak H. Turyono & Ibu Kistiyani
                 </p>
               </div>
-              <a target="_blank" href="https://www.instagram.com/amaliakholifa/" className="font-normal text-xl tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full py-3 px-12 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg flex items-center  gap-2 mt-8">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/amaliakholifa/"
+                className="font-normal lg:text-xl md:text-base text-sm tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full md:py-3 py-2 lg:px-12 md:px-8 px-6 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg flex items-center  gap-2 mt-8"
+              >
                 <Icon icon="mdi:instagram" width="24" height="24" />
                 @amaliakholifa
               </a>
             </div>
           </div>
-          <div className="border-3 border-[#d19b22] p-12 rounded-2xl text-center">
-            <p className="font-bold text-4xl text-[#D19B22]">AKAD NIKAH</p>
-            <p className="text-2xl font-medium">Telah dilaksanakan 31 Januari 2026</p>
+          <div className="border-3 border-[#d19b22] lg:px-12 lg:py-12 md:px-8 md:py-8 px-6 py-6 rounded-2xl text-center w-full sm:w-fit">
+            <p className="font-bold lg:text-4xl md:text-3xl text-2xl text-[#D19B22]">
+              AKAD NIKAH
+            </p>
+            <p className="lg:text-2xl md:text-lg text-base font-medium">
+              Telah dilaksanakan 31 Januari 2026
+            </p>
           </div>
-          <div className="flex flex-col gap-8 text-[40px] items-center justify-center ">
-            <p className="text-4xl text-[#D19B22] font-bold">NGUNDUH MANTU :</p>
-            <div className="flex items-center justify-center gap-10 -translate-x-7 font-light">
+          <div className="flex flex-col gap-8 lg:text-[40px] md:text-[32px] text-2xl items-center justify-center ">
+            <p className="lg:text-4xl md:text-3xl text-2xl text-[#D19B22] font-bold">
+              NGUNDUH MANTU :
+            </p>
+            <div className="flex items-center justify-center lg:gap-10 md:gap-8 gap-5 lg:-translate-x-7 md:-translate-x-5 -translate-x-3 font-light">
               <p>Februari</p>
               <span className="flex flex-col border-r border-l px-8 py-4 items-center justify-center">
-                <span className="text-[32px]">Sabtu</span>
-                <span className="text-8xl text-[#d19b22]">07</span>
+                <span className="lg:text-[32px] md:text-[24px] text-base">
+                  Sabtu
+                </span>
+                <span className="lg:text-8xl md:text-6xl text-4xl text-[#d19b22]">
+                  07
+                </span>
               </span>
               <p>2026</p>
             </div>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <span className="font-medium text-[32px]">Pengajian Kaum Ibu</span>
-            <span className="font-light text-[32px] text-[#d19b22]">08.00 s/d 11.00</span>
+            <span className="font-medium lg:text-[32px] md:text-[24px] text-2xl">
+              Pengajian Kaum Ibu
+            </span>
+            <span className="font-light lg:text-[32px] md:text-[24px] text-xl text-[#d19b22]">
+              08.00 s/d 11.00
+            </span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <span className="font-medium text-[32px]">Acara Resepsi</span>
-            <span className="font-light text-[32px] text-[#d19b22]">11.00 s/d 17.00</span>
+            <span className="font-medium lg:text-[32px] md:text-[24px] text-2xl">
+              Acara Resepsi
+            </span>
+            <span className="font-light lg:text-[32px] md:text-[24px] text-xl text-[#d19b22]">
+              11.00 s/d 17.00
+            </span>
           </div>
-          <div className="text-[32px] text-center">
-            <span className="font-medium">Lokasi:</span>
-            <p className="font-light">Jl. Gunung Putri Utara, Gg. Tempe RT 04/09 No. 52,<br />
-              Kec. Gunung Putri, Kab. Bogor</p>
+          <div className="text-center">
+            <span className="font-medium lg:text-[32px] md:text-[24px] text-xl">
+              Lokasi:
+            </span>
+            <p className="font-light lg lg:text-[32px] md:text-[24px] text-[15px]">
+              Jl. Gunung Putri Utara, Gg. Tempe RT 04/09 No. 52,
+              <br />
+              Kec. Gunung Putri, Kab. Bogor
+            </p>
           </div>
-          <a target="_blank" href="https://maps.app.goo.gl/F7F3SPKdXTTgsxuA9" className="font-light text-4xl tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full py-3 px-12 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg flex items-center  gap-2 mt-8">
+          <a
+            target="_blank"
+            href="https://maps.app.goo.gl/F7F3SPKdXTTgsxuA9"
+            className="font-light lg:text-4xl md:text-xl text-base tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full py-3 px-12 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg flex items-center gap-2 lg:mt-8 md:mt-6"
+          >
             Google Maps
           </a>
         </div>

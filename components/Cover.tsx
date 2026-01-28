@@ -11,7 +11,6 @@ export default function Cover({
   isOpen: boolean;
   onOpen: () => void;
 }) {
-
   return (
     <div
       className={`
@@ -20,7 +19,7 @@ export default function Cover({
         ${isOpen ? "-translate-y-full" : "translate-y-0"}
       `}
     >
-      <section className="h-screen w-full flex flex-col items-center justify-end pb-32 gap-10 text-4xl relative overflow-hidden text-white ">
+      <section className="h-screen w-full flex flex-col items-center justify-end pb-32 gap-10 lg:text-4xl md:text-2xl text-xl relative overflow-hidden text-white ">
         {/* --- BACKGROUND IMAGE START --- */}
         <Image
           src="/images/cover.webp"
@@ -40,13 +39,13 @@ export default function Cover({
           </div>
 
           <h1 className="text-[#d19b22] flex items-center gap-6 text-4xl md:text-[64px] font-playwrite-us-modern drop-shadow-md">
-            Amar <span className="text-4xl translate-y-3">&</span> Amalia
+            Amar <span className="md:text-4xl text-2xl translate-y-3">&</span>{" "}
+            Amalia
           </h1>
         </header>
 
         {/* Bagian Penerima Undangan & CTA */}
         <div className="flex flex-col items-center gap-8 w-full z-10">
-
           {/* 3. Render Kondisional: Hanya muncul jika guestName ada */}
           {to && (
             <div className="text-center space-y-2">
@@ -61,7 +60,7 @@ export default function Cover({
             type="button"
             onClick={onOpen}
             aria-label="Buka undangan"
-            className="font-normal text-xl mt-2 tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full py-3 px-12 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg"
+            className="font-normal md:text-2xl mt-2 tracking-widest bg-white/20 hover:bg-white/20 transition-colors rounded-full md:py-3 py-2 lg:px-12 md:px-8 px-6 backdrop-blur-md cursor-pointer border border-white/20 shadow-lg"
           >
             Open The Invitation
           </button>
