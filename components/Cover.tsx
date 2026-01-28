@@ -26,7 +26,14 @@ export default function Cover({
           alt="Cover Background"
           fill
           priority
-          className="object-cover lg:object-center  -z-20"
+          className="object-cover lg:object-center hidden md:block -z-20"
+        />
+        <Image
+          src="/images/cover-mobile.webp"
+          alt="Cover Background"
+          fill
+          priority
+          className="object-cover lg:object-center md:hidden -z-20"
         />
 
         <div className="absolute inset-0 bg-black/50 -z-10" />
