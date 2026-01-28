@@ -25,7 +25,9 @@ export default function Gift() {
             Address to send a Gift
           </h3>
           <p className="lg:text-xl md:text-lg text-base font-light">
-            Jl. Gunung Putri Utara, Gg. Tempe RT 04/09 No. 52,
+            Jl. Gunung Putri Utara,
+            <br className="md:hidden" />
+            Gg. Tempe RT 04/09 No. 52,
             <br />
             Kec. Gunung Putri, Kab. Bogor
           </p>
