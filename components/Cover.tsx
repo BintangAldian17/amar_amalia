@@ -19,7 +19,7 @@ export default function Cover({
         ${isOpen ? "-translate-y-full" : "translate-y-0"}
       `}
     >
-      <section className="h-screen w-full flex flex-col items-center justify-end pb-32 gap-10 lg:text-4xl md:text-2xl text-xl relative overflow-hidden text-white ">
+      <section className="h-screen w-full flex flex-col items-center justify-end pb-32 lg:gap-10 md:gap-8 gap-6 lg:text-4xl md:text-2xl text-xl relative overflow-hidden text-white ">
         {/* --- BACKGROUND IMAGE START --- */}
         <Image
           src="/images/cover.webp"
@@ -40,7 +40,7 @@ export default function Cover({
         {/* --- BACKGROUND IMAGE END --- */}
 
         {/* Grouping Header: Judul Acara & Nama Mempelai */}
-        <header className="flex flex-col items-center justify-center gap-5 text-center z-10">
+        <header className="flex flex-col items-center justify-center md:gap-5 gap-2 text-center z-10">
           <div className="flex items-center gap-5 opacity-90">
             <p className="tracking-widest font-light">The Wedding Of</p>
           </div>
@@ -52,11 +52,11 @@ export default function Cover({
         </header>
 
         {/* Bagian Penerima Undangan & CTA */}
-        <div className="flex flex-col items-center gap-8 w-full z-10">
+        <div className="flex flex-col items-center lg:gap-8 md:gap-6 gap-2 w-full z-10">
           {/* 3. Render Kondisional: Hanya muncul jika guestName ada */}
           {to && (
-            <div className="text-center space-y-2">
-              <p className="text-xl">Dear,</p>
+            <div className="text-center md:space-y-2">
+              <p className="text-xl md:text-2xl">Dear,</p>
               <p className="font-semibold underline underline-offset-8 decoration-white/50">
                 {to}
               </p>
