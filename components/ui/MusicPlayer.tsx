@@ -44,7 +44,7 @@ export default function MusicPlayer({
   };
 
   return (
-    <div className="fixed lg:bottom-6 lg:right-6 md:bottom-4 md:right-4 bottom-2 right-2 z-50 ">
+    <div className="fixed lg:bottom-6 lg:right-6 md:bottom-4 md:right-4 bottom-2 right-2 z-50 p-safe">
       {/* Element Audio Tersembunyi */}
       <audio ref={audioRef} src="/audio/music.mp3" loop />
 

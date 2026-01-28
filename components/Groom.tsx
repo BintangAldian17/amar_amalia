@@ -26,7 +26,7 @@ export default function Groom() {
       />
       <div className="flex items-center justify-center flex-col w-full lg:px-0 md:px-10 px-6">
         <div className="flex items-center flex-col lg:gap-16 md:gap-12 gap-8 justify-center lg:mt-20 md:mt-16 mt-8 w-full">
-          <div className="relative border-3 border-[#d19b22] rounded-xl overflow-hidden lg:w-[50%] md:w-[60%] w-full md:aspect-video h-[250px]">
+          <div className="relative border-3 border-[#d19b22] rounded-xl overflow-hidden lg:w-[50%] md:w-[60%] w-full md:aspect-video md:h-auto h-[250px]">
             <Image
               fill
               src="/images/weading.webp"
