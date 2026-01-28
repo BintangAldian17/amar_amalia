@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="h-screen w-full flex flex-col items-start lg:pb-32 md:pb-20 pb-10 gap-10 lg:text-4xl md:text-2xl text-xl relative overflow-hidden text-white">
+    <section className="h-screen w-full flex flex-col items-start lg:pb-32 md:pb-20 pb-16 gap-10 lg:text-4xl md:text-2xl text-xl relative overflow-hidden text-white">
       {/* Background Image */}
       <Image
         src="/images/hero1.webp"
@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/30 -z-10" />
 
       {/* CONTENT: Menggunakan style yang sama persis dengan Cover */}
-      <div className="flex flex-col items-start justify-end z-10  w-full h-full lg:pl-20 md:pl-16 pl-12">
+      <div className="flex flex-col items-start justify-end z-10  w-full h-full lg:pl-20 md:pl-16 pl-12 ">
         {/* Top Text: Join Us + The Wedding Of */}
         <div className="flex flex-col gap-2 mb-3 opacity-90 lg:text-4xl md:text-2xl text-xl font-light tracking-widest">
           <p>
