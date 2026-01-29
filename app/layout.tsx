@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "https://amar-amalia.my.id/og-image.png",
         width: 1200,
         height: 630,
         alt: "The Wedding of Amar & Amalia - Sabtu 07 Februari 2026",
