@@ -60,6 +60,15 @@ export const metadata: Metadata = {
     siteName: "Amar & Amalia Wedding",
     locale: "id_ID",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "The Wedding of Amar & Amalia - Sabtu 07 Februari 2026",
+        type: "image/png",
+      },
+    ],
   },
 };
 
